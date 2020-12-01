@@ -27,8 +27,7 @@
 		<pre class="output"></pre>
 
 		<script>
-			var x = 0 ;  // In degree in the range [-180,180]
-			var y = 0; // In degree in the range [-90,90]
+		
 			var ball   = document.querySelector('.ball');
 			var garden = document.querySelector('.garden');
 			var output = document.querySelector('.output');
@@ -36,11 +35,10 @@
 			var maxX = garden.clientWidth  - ball.clientWidth;
 			var maxY = garden.clientHeight - ball.clientHeight;
 
-			function handleOrientation(event) {
-				var dirx= event.beta;
-				var dir =event.gamma;				
-				x= x+event.beta;
-				y= y+event.gamma;
+			function handleOrientation(event) {			
+				var x = event.beta;  // In degree in the range [-180,180]
+				var y = event.gamma; // In degree in the range [-90,90]
+				
 				
 				output.innerHTML  = "beta : " + x + "\n";
 				output.innerHTML += "gamma: " + y + "\n";
