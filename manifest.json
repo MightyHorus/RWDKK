@@ -1,0 +1,47 @@
+﻿{
+  "short_name": "Thesis",
+  "name": "Projekt końcowy PWA",
+  "description": "Semestralny projekt Progressive Web App",
+  "icons": [
+    {
+      "src": "/images/logotype16.png",
+      "type": "image/png",
+      "sizes": "16x16"
+    },
+    {
+      "src": "images/logotype32.png",
+      "type": "image/png",
+      "sizes": "32x32"
+    },
+    {
+      "src": "images/logotype64.png",
+      "type": "image/png",
+      "sizes": "64x64"
+    },
+    {
+      "src": "images/logotype128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "images/logotype256.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "images/logotype512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": ".images/logotype1024.png",
+      "type": "image/png",
+      "sizes": "1024x1024"
+    }
+  ],
+  "start_url": "./index.html",
+  "background_color": "#FAFAFA",
+  "theme_color": "#F91077",
+  "display": "standalone",
+  "scope": "./"
+}

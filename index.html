@@ -1,0 +1,128 @@
+<html lang="pl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Fajna strona</title>
+    
+
+    <link rel="icon" type="image/png" href="./images/logo32.png">
+    <link rel="manifest" href="manifest.json"> 
+    <meta name="theme-color" content="#317EFB">
+    <link rel="apple-touch-icon" href="/images/logo32.png">
+<style>
+
+html, body {
+    height: 98%;
+    position: relative;
+}
+
+#wrapper {
+    height: 98%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 15%;
+    background-color: white;
+}
+
+#artykuł {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 15%;
+    background-color: white;
+}
+header img {
+    display: flex;
+    margin: auto;
+    width: auto;
+    height: 80%;
+}
+
+header h1 {
+    display: flex;
+    margin: auto;
+  font-family: Georgia, serif;
+}
+header div {
+    display: flex;
+    margin: auto;
+  font-family: Georgia, serif;
+}
+
+div section {
+    display: flex;
+    margin: auto;
+  font-family: Georgia, serif;
+}
+
+
+hr {
+    border: none;
+    width: 90%;
+    height: 8%;
+    border-bottom: 1px solid #1f1209;
+    box-shadow: 0 20px 20px -20px #333;
+    margin-top: -2%;
+}
+
+section {
+    height: 100%;
+}
+</style>
+</head>
+
+<body>
+<div id="container ">
+    <header>
+        <img src="./images/Logo32.png" alt="Logo">
+        <h1>RWD Karol Kołodziejczyk</h1>
+		<div id="clock">13 : 44 : 23</div>
+
+    </header>
+    <hr>
+
+    <div id="artykuł">
+
+        <section>
+            <h2>Sekcja robocza</h2>
+        </section>
+    </div>
+	<hr>
+</div>
+
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register("serviceWorker.js").then(function () {
+            console.log('Service worker zainstalowany!')
+        }).catch(function (err) {
+            console.log('Service worker nie zostal zainstalowany! Sprawdz blad:', err)
+        });
+    }
+</script>
+<script>
+function clock() {
+    const date = new Date(); 
+    const hour = updateTime(date.getHours());
+    const minutes = updateTime(date.getMinutes());
+    const seconds = updateTime(date.getSeconds());
+    document.getElementById("clock").innerText = `${hour} : ${minutes} : ${seconds}`;
+}
+
+function updateTime(time) {
+    if (time < 10) {
+        return `0${time}`;
+    }
+    else {
+        return time;
+    }
+}
+
+window.onload = function () {
+    setInterval(clock, 1000);
+
+</script>
+
+</body></html>
