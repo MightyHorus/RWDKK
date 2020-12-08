@@ -12,7 +12,9 @@
 		</style>
 	</head>
 	<body>
-
+		<div class="obraz">
+		
+		</div>
 		<script>
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register("serviceWorker.js").then(function () {
@@ -22,6 +24,17 @@
         });
     }
 
+		</script>
+		<script>
+		var rozmiar_x = window.innerWidth;
+        var rozmiar_y = window.innerHeight;
+        var pozycja_x = (rozmiar_x/2)-48;
+        var pozycja_y = (rozmiar_y/2)-48;
+		
+			var x1 = 1;
+            var y1 = 1;
+			var obraz = document.createElement("div");
+			obraz.className = "obraz";
 		</script>
 	</body>
 </html>
