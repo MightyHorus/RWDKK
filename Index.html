@@ -6,7 +6,7 @@
 		.obraz{
             width: 96px;
             height: 96px;
-            background-image: url("images/logo64.png");
+            background-image: url("logo64.png");
             position: absolute;
         }
 		</style>
@@ -35,6 +35,17 @@
             var y1 = 1;
 			var obraz = document.createElement("div");
 			obraz.className = "obraz";
+			function przesuwanie(){
+			pozycja_x=pozycja_x+1;
+			pozycja_y = pozycja_y + y1;
+			obraz.style.left =  pozycja_x + "px";
+			obraz.style.top  = pozycja_y + "px";
+			document.body.appendChild(obraz);
+			}
+			
+			window.onload = function () {
+			setInterval(przesuwanie, 1000);
+			}
 		</script>
 	</body>
 </html>
