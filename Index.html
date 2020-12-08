@@ -53,16 +53,17 @@
 			}
 			}
 			
+
+			window.onload = function () {
+			setInterval(przesuwanie, 1);
+			}
 			
 			window.addEventListener('deviceorientation', e =>{
 			x = e.beta;
 			y = e.gamma;
-			if((x>0) ){
+			if((x>0)){
                     x1=2;
                 }
-			}
-			window.onload = function () {
-			setInterval(przesuwanie, 1);
 			}
 		</script>
 	</body>
