@@ -54,9 +54,9 @@
 			}
 			
 
-			window.onload = function () {
-			setInterval(przesuwanie, 1);
-			}
+			//window.onload = function () {
+			//setInterval(przesuwanie, 1);
+			//}
 			
 			window.addEventListener('deviceorientation', e =>{
 			x = e.beta;
@@ -64,6 +64,7 @@
 			if((x>0)){
                     x1=2;
                 }
+			przesuwanie();
 			});
 		</script>
 	</body>
