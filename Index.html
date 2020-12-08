@@ -38,6 +38,12 @@
 			obraz.style.left =  pozycja_x + "px";
 			obraz.style.top  = pozycja_y + "px";
 			document.body.appendChild(obraz);
+			if((pozycja_x-96)>rozmiar_x){
+			x1=-2;
+			}
+			else if(pozycja_x<0){
+			x1=2;
+			}
 			}
 			
 			window.onload = function () {
