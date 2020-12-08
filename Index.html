@@ -27,57 +27,58 @@
 
 		</script>
 		<script>
-		var rozmiar_x = window.innerWidth;
-        var rozmiar_y = window.innerHeight;
-        var pozycja_x = (rozmiar_x/2)-48;
-        var pozycja_y = (rozmiar_y/2)-48;
-		
-			var x1 = 1;
-            var y1 = 1;
-			var obraz = document.createElement("div");
-			obraz.className = "obraz";
-			
-			function przesuwanie(){
-			
-			if((pozycja_x+96)>rozmiar_x){
-				x1=-2;
-			}
-			else if(pozycja_x<0){
-				x1=2;
-			}
-			
-			if((pozycja_y+96)>rozmiar_y){
-				y1=2;
-			}
-			else if(pozycja_y<0){
-				y1=-2;
-			}
-			pozycja_x=pozycja_x+1;
-			pozycja_y = pozycja_y + y1;
-			obraz.style.left =  pozycja_x + "px";
-			obraz.style.top  = pozycja_y + "px";
-			document.body.appendChild(obraz);
+var rozmiar_x = window.innerWidth;
+var rozmiar_y = window.innerHeight;
+var pozycja_x = (rozmiar_x / 2) - 48;
+var pozycja_y = (rozmiar_y / 2) - 48;
 
-			}
-			
+var x1 = 1;
+var y1 = 1;
 
-			
-			window.addEventListener('deviceorientation', e =>{
-			x = e.beta;
-			y = e.gamma;
-			if((x>0)){
-                    x1=2;
-                }
-			if((y>0)){
-                    y1=2;
-                }
-			});
-			
-        function start(){
-            przesuwanie();
-            setTimeout(start, 500);
-        }
-        start();
+var obraz = document.createElement(`div`);
+obraz.className = `obraz`;
+
+function przesuwanie() {
+
+    /**
+     * Collision checking
+     */
+    if ((pozycja_x + 96) > rozmiar_x) {
+        x1 = -2;
+    } else if (pozycja_x < 0) {
+        x1 = 2;
+    }
+    if ((pozycja_y + 96) > rozmiar_y) {
+        y1 = -2;
+    } else if (pozycja_y < 0) {
+        y1 = 2;
+    }
+
+    pozycja_x = pozycja_x + x1;
+    pozycja_y = pozycja_y + y1;
+
+    obraz.style.left = pozycja_x + `px`;
+    obraz.style.top = pozycja_y + `px`;
+    document.body.appendChild(obraz);
+}
+
+window.onload = () => setInterval(przesuwanie, 1);
+
+window.addEventListener(`deviceorientation`, e => {
+    x = e.beta;
+    y = e.gamma;
+
+    if (x > 0) {
+        x1 = 2;
+    } else if (x < 0) {
+        x1 = -2;
+    }
+    if (y > 0) {
+        y1 = -2;
+    } else if (y < 0) {
+        y1 = 2;
+    }
+});
 		</script>
 	</body>
 </html>
