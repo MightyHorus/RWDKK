@@ -46,13 +46,21 @@
 			}
 			
 			if((pozycja_y-96)>rozmiar_y){
-			y1=-2;
+			y1=2;
 			}
 			else if(pozycja_y<0){
-			y1=2;
+			y1=-2;
 			}
 			}
 			
+			
+			window.addEventListener('deviceorientation', e =>{
+			x = e.beta;
+			y = e.gamma;
+			if((x>0) ){
+                    x1=2;
+                }
+			}
 			window.onload = function () {
 			setInterval(przesuwanie, 1);
 			}
