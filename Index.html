@@ -14,6 +14,14 @@
 	<body>
 
 		<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register("serviceWorker.js").then(function () {
+            console.log('Service worker zainstalowany!')
+        }).catch(function (err) {
+            console.log('Service worker nie zostal zainstalowany! Sprawdz blad:', err)
+        });
+    }
+
 		</script>
 	</body>
 </html>
