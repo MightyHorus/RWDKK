@@ -36,9 +36,9 @@
             var y1 = 1;
 			var obraz = document.createElement("div");
 			obraz.className = "obraz";
+			
 			function przesuwanie(){
-			pozycja_x=pozycja_x+1;
-			pozycja_y = pozycja_y + y1;
+			
 			if((pozycja_x+96)>rozmiar_x){
 				x1=-2;
 			}
@@ -52,6 +52,8 @@
 			else if(pozycja_y<0){
 				y1=-2;
 			}
+			pozycja_x=pozycja_x+1;
+			pozycja_y = pozycja_y + y1;
 			obraz.style.left =  pozycja_x + "px";
 			obraz.style.top  = pozycja_y + "px";
 			document.body.appendChild(obraz);
