@@ -39,14 +39,14 @@
 			function przesuwanie(){
 			pozycja_x=pozycja_x+1;
 			pozycja_y = pozycja_y + y1;
-			if((pozycja_x-96)>rozmiar_x){
+			if((pozycja_x+96)>rozmiar_x){
 				x1=-2;
 			}
 			else if(pozycja_x<0){
 				x1=2;
 			}
 			
-			if((pozycja_y-96)>rozmiar_y){
+			if((pozycja_y+96)>rozmiar_y){
 				y1=2;
 			}
 			else if(pozycja_y<0){
